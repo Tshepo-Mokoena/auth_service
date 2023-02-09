@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.auth_service.json.requests.CreateUser;
-import com.auth_service.json.requests.Response;
+import com.auth_service.json.response.Response;
 import com.auth_service.service.registration.IRegistrationService;
 
 @RestController

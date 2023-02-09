@@ -1,4 +1,4 @@
-package com.auth_service.json.requests;
+package com.auth_service.json.response;
 
 import java.util.Date;
 
