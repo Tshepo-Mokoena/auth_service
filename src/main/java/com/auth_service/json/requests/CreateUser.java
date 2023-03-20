@@ -11,19 +11,19 @@ import lombok.Data;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CreateUser {
 	
-	@JsonProperty
+	@JsonProperty("names")
 	private String names;
 	
-	@JsonProperty
+	@JsonProperty("surname")
 	private String surname;
 	
-	@JsonProperty
+	@JsonProperty("email")
 	private String email;
 	
-	@JsonProperty
+	@JsonProperty("phone")
 	private String phone;
 	
-	@JsonProperty
+	@JsonProperty("password")
 	private String password;
 	
 	@JsonProperty("created_at")

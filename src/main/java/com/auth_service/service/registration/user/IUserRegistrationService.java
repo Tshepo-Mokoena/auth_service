@@ -1,4 +1,4 @@
-package com.auth_service.service.registration;
+package com.auth_service.service.registration.user;
 
 import com.auth_service.json.requests.CreateUser;
 
@@ -6,7 +6,7 @@ import com.auth_service.json.requests.CreateUser;
  * @author Tshepo Mokoena
  * @version 1.0
  */
-public interface IRegistrationService {
+public interface IUserRegistrationService {
 	
 	/**
 	 * @param user

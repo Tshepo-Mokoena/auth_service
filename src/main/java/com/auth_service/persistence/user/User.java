@@ -2,8 +2,12 @@ package com.auth_service.persistence.user;
 
 import java.time.LocalDateTime;
 
+import com.auth_service.security.authority.Role;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -36,6 +40,16 @@ public class User {
 	
 	@Column(name = "password", updatable = true, nullable = false)
 	private String password;
+	
+	@Enumerated(EnumType.STRING)
+	@Column(nullable = false, updatable = true)
+	private Role role;
+	
+	@Column(name = "active", updatable = true, nullable = false)
+	private boolean active;
+	
+	@Column(name = "locked", updatable = true, nullable = false)
+	private boolean locked;
 	
 	@Column(name = "last_login", updatable = false, nullable = true)
 	private LocalDateTime lastLogin;
