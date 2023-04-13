@@ -21,7 +21,7 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/system/user")
-public class SystemAPI {
+public class SystemAdministratorAPI {
 	
 	@Autowired
 	private IUserService userService;
