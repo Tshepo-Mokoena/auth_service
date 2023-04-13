@@ -46,12 +46,14 @@ public class JwtService implements IJwtService {
 	
 	@Override
 	public Authentication getAuthenticated(HttpServletRequest req) {
+		
 		Claims claims = extractClaims(req);
 		
 		if(claims == null)
 			return null;			
 		
 		String email = claims.getSubject();
+		
 		Long accountId = claims.get("accountId", Long.class);
 		
 		Set<GrantedAuthority> authorities = Arrays.stream(claims.get("roles").toString().split(","))
@@ -72,6 +74,7 @@ public class JwtService implements IJwtService {
 
 	@Override
 	public boolean validateToken(HttpServletRequest req) {
+		
 		Claims claims = extractClaims(req);
 		
 		if(claims == null)
